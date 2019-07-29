@@ -7,7 +7,7 @@
             "Properties": {
                 "Handler": "pymysql.lambda_handler",
                 "Role": "arn:aws:iam::550069569828:role/s3-rds-role",
-                "FunctionName": "lambdards4",
+                "FunctionName": { "Ref" : "function_name" },
                 "Code": {
 						"S3Bucket" : "project-bucket-group4",
 						"S3Key" : "lambda.zip"					                   
@@ -17,7 +17,12 @@
 				
             }
 			
-        }
+        },
+		"Parameters":{
+			"function_name" : "funcname"
+			
+		
+		}
 		
     }
 }
