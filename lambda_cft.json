@@ -19,7 +19,8 @@
 			
         },
 		"Parameters":{
-			"function_name" : "funcname"
+			"function_name" : {
+			"Type":"String"}
 			
 		
 		}
