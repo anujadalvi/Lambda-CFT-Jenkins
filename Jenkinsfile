@@ -4,7 +4,7 @@ pipeline{
 	stage('Clone Repo') {
 		steps {
 			sh "export AWS_DEFAULT_REGION=us-east-1"
-			sh "aws cloudformation create-stack --stack-name dbda4stack --template-body file://lambda_cft.json --region 'us-east-1'"
+			sh "aws cloudformation create-stack --stack-name ${stackname} --template-body file://lambda_cft.json --parameter ParameterKey="funcname",ParameterValue=${func_name} --region 'us-east-1'"
 			}
 	}
 		
