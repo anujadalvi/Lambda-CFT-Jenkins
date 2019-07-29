@@ -1,0 +1,23 @@
+{
+    "AWSTemplateFormatVersion" : "2010-09-09",
+    "Description": "Creating Lambda",
+    "Resources": {
+        "MyLambdaFunction": {
+            "Type": "AWS::Lambda::Function",
+            "Properties": {
+                "Handler": "pymysql.lambda_handler",
+                "Role": "arn:aws:iam::550069569828:role/s3-rds-role",
+                "FunctionName": "lambdards",
+                "Code": {
+						"S3Bucket" : "project-bucket-group4",
+						"S3Key" : "lambda.zip"					                   
+                    },
+                "Runtime": "python3.6",
+                "Timeout": "25"
+				
+            }
+			
+        }
+		
+    }
+}
