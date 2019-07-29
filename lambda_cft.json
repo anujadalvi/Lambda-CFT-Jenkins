@@ -17,13 +17,14 @@
 				
             }
 			
-        },
+        }},
 		"Parameters":{
 			"function_name" : {
-			"Type":"String"}
+			"Type" : "String"
+			}
 			
 		
 		}
 		
-    }
+    
 }
