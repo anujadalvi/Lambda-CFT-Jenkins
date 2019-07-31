@@ -11,7 +11,7 @@
                     "Ref": "functionname"
                 },
                 "Code": {
-                    "S3Bucket": "project-bucket-group4",
+                    "S3Bucket": "anuja-s3",
                     "S3Key": "lambda.zip"
                 },
                 "Runtime": "python3.6",
