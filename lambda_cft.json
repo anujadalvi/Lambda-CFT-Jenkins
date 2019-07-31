@@ -1,5 +1,5 @@
 {
-    "AWSTemplateFormatVersion" : "2010-09-09",
+    "AWSTemplateFormatVersion": "2010-09-09",
     "Description": "Creating Lambda",
     "Resources": {
         "MyLambdaFunction": {
@@ -7,24 +7,21 @@
             "Properties": {
                 "Handler": "lambda.lambda_handler",
                 "Role": "arn:aws:iam::550069569828:role/s3-rds-role",
-                "FunctionName": { "Ref" : "functionname" },
+                "FunctionName": {
+                    "Ref": "functionname"
+                },
                 "Code": {
-						"S3Bucket" : "project-bucket-group4",
-						"S3Key" : "lambda.zip"					                   
-                    },
+                    "S3Bucket": "project-bucket-group4",
+                    "S3Key": "lambda.zip"
+                },
                 "Runtime": "python3.6",
                 "Timeout": "25"
-				
             }
-			
-        }},
-		"Parameters":{
-			"functionname" : {
-			"Type" : "String"
-			}
-			
-		
-		}
-		
-    
+        }
+    },
+    "Parameters": {
+        "functionname": {
+            "Type": "String"
+        }
+    }
 }
